@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <TITLE>Onde Estamos</TITLE>
+	<meta charset="utf-8">
+	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link rel="stylesheet" type="text/css" href="gps.html">
+   </head>
+
+<!--Menu-->
+ <body>
+   <header>
+	 <nav class="logo">
+		<strong class="estilofonte">Laundry</strong><br>
+		<strong class="estilofonte">Confi</strong>
+	   <div class="menu">
+	    <ul>
+         <li><a href="index.html">Página Inicial</a></li>
+         <li><a href="servicos.html">Serviços</a></li>
+         <li><a href="istitucional.html">Quem somos</a></li>
+         <li><a href="CadastrarUsuario.html">Cadastre se Aqui</a></li>
+         <li><a href="Cadastrarpedido.html">Faça um pedido</a></li>
+         <li><a class="quem-somos" href="fale_conosco.html">Contato</a></li>
+         <li><a href="login.html">Login</a></li>
+         <li><a href="Faq.html">FAQ</a></li>
+        </ul>
+	  </div>
+     </nav>
+  </header>
+
+<!--contexto da localizacao das loja-->
+  <div class="texto">
+	<strong>Atualmente o grupo Laundry Confi</strong><br>
+	  Conta com mais de 8 lojas <br>
+	  <b>Espalhadas por todo o país</b><br><br><br>
+
+<!--Enderenço das franquias-->
+  <div class="enderecos">
+	  <p><h3>São Paulo - SP</h3> Rua Martinico Prado, 184, Higienópolis <br>
+	  Telefone: (11) 3222-4298 <br>
+	  Segunda e sexta: 07h00 - 19h00, sábados: 08h00 - 14:00</p>
+<!--gps-->
+<p id="demo">Clique no botão para obter sua localização:</p>
+<button onclick="getLocation()">Clique aqui</button>
+<div id="mapholder"></div>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocalização não é suportada nesse browser.";}
+  }
+ 
+function showPosition(position)
+  {
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
+  latlon=new google.maps.LatLng(lat, lon)
+  mapholder=document.getElementById('mapholder')
+  mapholder.style.height='250px';
+  mapholder.style.width='500px';
+ 
+  var myOptions={
+  center:latlon,zoom:14,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
+  }
+ 
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="Usuário rejeitou a solicitação de Geolocalização."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Localização indisponível."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="O tempo da requisição expirou."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="Algum erro desconhecido aconteceu."
+      break;
+    }
+  }
+</script>
+<!--fim de gps-->
+	<hr>
+	  <p><h3>Campinas - SP</h3>Rua Coronel Quirino, 483, Cambuí
+	  Telefone: (19) 3396-6660
+	  Segunda a sexta: 08h00-18h00, sábados: 09h00-13h</p>
+	  <!--gps--><p id="demo">Clique no botão para obter sua localização:</p>
+<button onclick="getLocation()">Clique aqui</button>
+<div id="mapholder"></div>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocalização não é suportada nesse browser.";}
+  }
+ 
+function showPosition(position)
+  {
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
+  latlon=new google.maps.LatLng(lat, lon)
+  mapholder=document.getElementById('mapholder')
+  mapholder.style.height='250px';
+  mapholder.style.width='500px';
+ 
+  var myOptions={
+  center:latlon,zoom:14,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
+  }
+ 
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="Usuário rejeitou a solicitação de Geolocalização."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Localização indisponível."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="O tempo da requisição expirou."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="Algum erro desconhecido aconteceu."
+      break;
+    }
+  }
+</script>
+<!--fim de gps-->
+    <hr>
+	  <p><h3>Fortaleza - CE</h3>Av. Santos Dumont, 2113 - Fortaleza <br>
+	  Telefone: (85) 3032-7800 <br>
+	  Seg a sex: 8h às 18h30min e Sábado: 8h às 13h</p>
+	<hr>
+	
+	  <p><h3>Blumenau - SC</h3>Alameda Rio Branco, 748 – CEP 89010-300 <br>
+	  Telefone: (47) 3288-6662 <br>
+	  Segunda a sexta:08h00-18h30, sábados:08h00-12h00</p>
+	<hr>
+	  <p><h3>Campos dos Goytacazes - RJ</h3>Rua Barão da Lagoa Dourada, 425
+	  Telefone: (22) 2735-3465
+	  Seg a Sex: 9h às 19h e Sábado: 9h às 13h</p>
+	<hr>
+	  <p><h3>Recife - PE</h3>Rua Ernesto de Paula Santos, 390. Bairro: Boa Viagem
+	  Telefone: (81) 3127-3334
+	  Seg a sex: 7h30min às 19h e Sábado: 8h às 14h</p>
+	<hr>
+	  <p><h3>Recife - PE</h3>Rua Ribeiro de Brito, 370. Bairro: Boa Viagem
+	  Telefone: (81) 3127-3334
+	  Seg a sex: 7h30min às 19h e Sábado: 8h às 14h</p>
+	<hr>
+	  <p><h3>Teresina - PI</h3>Av.Joquei Clube, nº 2150, Sala 01, São Cristovão, CEP: 64051-110 Telefone: (86) 3233-4943
+	  Segunda a sexta: 08h00-18h30, sábados: 08h30-13h00</p>
+	<hr>
+	  <p><h3>Caxias do Sul - RS</h3>Rua Marechal Floriano, 209 – PIO X
+	  Telefone: (54) 3039-2257
+	  Seg a sex: 8h30min às 12h e das 13h30min às 18h30min. Sábado: 8h30min às 12h</p>
+	<hr>
+   </div>
+  </div>
+
+<!--abertura e fechamento de div do mapa-->
+   <div class="imagem-mapa">
+		
+   </div>
+
+<!--Rodapé--> 
+   <footer class="rodape" style="margin-top: 140em;">
+	  <div class="div-rodape">
+		<ul>
+	   	 <li> <a href="https://www.facebook.com/"><img class="imagem-rodape" src="img/facebook.png"></a></li>
+		 <li><img class="imagem-rodape" src="img/instagran.png"></li>
+		 <li><img class="imagem-rodape" src="img/twitter.png"></li>
+		</ul>
+	  </div>
+   </footer>
+
+</body>
+</html>

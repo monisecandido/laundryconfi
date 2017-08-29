@@ -1,0 +1,288 @@
+body{
+     background-image: url("../img/papel.jpg");
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* Gera um quadrado responsivo. */
+.square{
+    padding-bottom: 1%; /* ... e está aqui */
+    margin: 1%;
+    float: left;
+    position: relative;
+    background-color: #fff;
+}
+
+
+.block{
+  position: absolute;
+  text-align: center;
+  background: #1a1a1a;
+  width: 100%;
+  height: 100%;
+}
+ 
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em;
+ }
+ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  background: #222;
+  color: #FFF;
+ }
+
+ .texto{
+  width: 48%;
+  height: 100px;
+  padding-bottom: 10%;
+  float: left;
+  margin: 1%;
+  font-size: 44px;
+  color: #525557;
+  margin-top: 1.5em;
+ }
+
+ .imagem{
+  background-image: url("../img/Estilos-crianza-e1470220515452.jpg");
+  background-size: 100% 100%;
+  width: 37em;
+  height: 24em;
+  padding-bottom: 10%;
+  float: left;
+  margin: 1%;
+ }
+
+ .imagem-mapa{
+  background-image: url("../img/mapa-do-brasil-azul.png");
+  background-size: 100% 100%;
+  width: 28em;
+  height: 29em;
+  padding-bottom: 10%;
+  float: left;
+  margin: 1%;
+ }
+
+ .texto > strong{
+    color: #2EBC99;
+    font-size: 48px;
+    position: static;
+
+ }
+ .texto > b{
+    color: #2EBC99;
+ }
+ .texto > p {
+  font-size: 20px;
+ }
+ .logo{
+    width: 100%;
+    height: 7em;
+    background-color: #43D1AF;
+ }
+ .logo > strong{
+    font-size: 2.2em;
+    color: #fff;
+    margin-left: 1em;
+ }
+ .menu {
+    float: right;
+    margin-right: 5em;
+    padding-bottom: 2em;
+ }
+ .menu > ul{
+    list-style: none;
+ }
+.menu ul li{
+    display: inline;
+ }  
+ .menu ul li a {
+    padding: 2px 5px;
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    border-bottom:3px solid #EDEDED;
+}
+
+.quem-somos{
+    border-bottom:3px solid #EDEDED;
+}
+.titulo-home{
+    margin-left: -5.5em;
+    font-size: 2.3em;
+    width: 100%;
+    color:  #2EBC99;
+}
+.slider-imagem{
+  max-width: 49em;
+}
+.rodape{
+  background-color: #CFCFCF;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 0;
+}
+.rodape > ul{
+    list-style: none;
+}
+.rodape ul li{
+    display: inline;
+ } 
+.imagem-rodape{
+  width: 4em;
+  height: 4em;
+}
+.div-rodape{
+  float: right;
+}
+
+.onde_estamos{
+  margin: 1em;
+  width: 21em;
+  border-radius: 0.2em;
+  background-color: #2EBC99;
+  color: #fff;
+}
+
+.enderecos{
+  font-size: 0.4em;
+}
+
+hr{
+  border-top: 1px solid #000000;
+  width: 100%;
+}
+
+.estilofonte{
+  font-style: italic;
+}
+
+.div{
+margin:2.5em 30em;
+}
+
+/*formulario */
+.form-style-6{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.form-style-6 h1{
+    background: #43D1AF;
+    padding: 30px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="text"],
+.form-style-6 input[type="text"],
+.form-style-6 input[type="text"],
+.form-style-6 input[type="text"],
+.form-style-6 input[type="text"],
+.form-style-6 input[type="text"],
+.form-style-6 textarea,
+.form-style-6 select
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    padding: 0.5%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;   
+    color: #fff;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #2EBC99;
+}
+
+.form-style-6 input[type="reset"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 50%;
+    padding: 3%;
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;   
+    color: #fff;
+}
+.form-style-6 input[type="reset"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #2EBC99;
+}
+/* Fim de Formulario */
+
+.item{
+
+
+padding: 3px;
+  float: left;
+  margin: 5px;
+  border: #d4dcde 1px solid;
+  width: 180px;
+  height: 248px;
+}
+.preco{
+
+  font-family: tahoma;
+  font-size: 18px;
+  color: #A71D1D;
+
+  
+}
+

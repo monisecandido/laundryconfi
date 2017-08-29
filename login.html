@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Login</title>
+     <meta charset="utf-8">
+      <TITLE>Login</TITLE>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+ </head>
+<body>
+   
+<!--validaação de dados-->
+<script>
+     function enviardados(){
+ 
+  if(document.dados.tx_nome.value=="" || document.dados.tx_nome.value.length < 8)
+     {
+     alert( "Preencha campo com no minimo 8 caracters!" );
+     document.dados.tx_nome.focus();
+  return false;
+     } 
+  if(document.dados.tx_senha.value=="" || document.dados.tx_senha.value.length < 8)
+     {
+     alert( "Preencha campo com no minimo 8 caracters!" );
+     document.dados.tx_senha.focus();
+  return false;
+     }
+     }
+</script>
+
+</head>
+
+<!--Menu-->
+  <header>
+   <body> 
+     <nav class="logo">
+       <strong class="estilofonte">Laundry</strong><br>
+       <strong class="estilofonte">Confi</strong>
+      <div class="menu">
+         <ul>
+           <li><a href="index.html">Página Inicial</a></li>
+           <li><a href="servicos.html">Serviços</a></li>
+           <li><a href="istitucional.html">Quem somos</a></li>
+           <li><a href="CadastrarUsuario.html">Cadastre se Aqui</a></li>
+           <li><a href="Cadastrarpedido.html">Faça um pedido</a></li>
+           <li><a href="fale_conosco.html">Contato</a></li>
+           <li><a class="quem-somos" href="login.html">Login</a></li>
+           <li><a href="Faq.html">FAQ</a></li>
+         </ul>
+      </div>
+     </nav>
+  </header></br></br>
+
+<!--Formulario-->
+    <div id="sup_direito"><br>
+    <div class="form-style-6">
+ <form action="conexao.php" method="post" name="dados" onSubmit="return enviardados();">
+ <h1><center>Preencha o formulário abaixo para fazer o login.</center></h1>
+  
+
+<!--dados do usuario-->
+    <div id="login"> Digite seu usuário : <input name="tx_nome" type="text" placeholder="Usuário" pattern="[a-z\s]+$" required></div><br> 
+    <div id="senha"> Digite sua senha : <br><input type="password" name="tx_senha"  placeholder="senha" required="true"></div><br>
+    
+
+    <a href="Esqueciminhasenha.html" class="ls-login-forgot">Esqueci minha senha</a><br>
+    <a href="Cadastrarusuario.html">Cadastre-se agora</a><br>
+	<label  <p class="txt-center ls-login-signup"> </label> </br></p>
+    <input name="Submit" type="submit"   value="Enviar dados"><br><br>
+   <center><input name="Reset" type="reset"  value="Limpar"></center>
+</form>
+</div>
+</div>
+
+<!--Rodapé-->
+    <footer class="rodape" style="margin-top: 20em;">
+        <div class="div-rodape">
+            <ul>
+                <li> <a href="https://www.facebook.com/"><img class="imagem-rodape" src="img/facebook.png"></a></li>
+                <li><img class="imagem-rodape" src="img/instagran.png"></li>
+                <li><img class="imagem-rodape" src="img/twitter.png"></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</doctype>

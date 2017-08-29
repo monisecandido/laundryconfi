@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Login</title>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+ </head>
+
+<!--Menu-->
+ <body>
+    <header>
+         <nav class="logo">
+            <strong class="estilofonte">Laundry</strong>
+            <br>
+            <strong class="estilofonte">Confi</strong>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="istitucional.html">Quem somos</a></li>
+                        <li><a href="CadastrarUsuario.html">Cadastre se Aqui</a></li>
+                        <li><a href="Cadastrarpedido.html">Faça um pedido</a></li>
+                        <li><a class="quem-somos" href="fale_conosco.html">Contato</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+   
+<!--dados de recuperação de usuario-->   
+  
+    <form action="conexao.php" method="post" name="dados"><br><br><br>
+
+         <div class="form-style-6">
+          <h1 class="modal-title" id="esqueci-minha-senha">Esqueci minha senha</h1>
+         
+               
+       
+        <div class="modal-body">
+        <p>Para recuperar sua senha, informe seu endereço de email cadastrado no sistema.</p><br/>
+        <div class="form-group">Digite seu E-mail</label>
+        <div class="col-sm-10">
+        <input type="email" class="form-control" id="email-forgot" name="email-forgot" placeholder="exemplo@email.com.br" required="required"><br><BR>
+        </div>
+        </div>
+        </div>
+    
+   <input name="Submit" type="submit"   value="Enviar dados"><br><br>
+   <center><input name="Reset" type="reset"  value="Limpar"></center>
+</form>
+</div>
+
+
+
+
+<footer class="rodape" style="margin-top: 30em;">
+        <div class="div-rodape">
+            <ul>
+                <li> <a href="https://www.facebook.com/"><img class="imagem-rodape" src="img/facebook.png"></a></li>
+                <li> <a href="https://www.instagram.com/?hl=pt-br"><img class="imagem-rodape" src="img/instagran.png"></a></li>
+                <li> <a href="https://twitter.com/login?lang=pt"><img class="imagem-rodape" src="img/twitter.png"></a></li>
+
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
+
